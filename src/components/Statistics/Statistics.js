@@ -1,4 +1,5 @@
 import Item from "./Statistics-item";
+import PropTypes from "prop-types";
 import s from "./Statistics.module.css";
 
 const Statistics = ({ title, stats }) => {
@@ -15,6 +16,9 @@ const Statistics = ({ title, stats }) => {
   );
 };
 
-// Profile.propTypes = {}
+Statistics.propTypes = {
+  title: PropTypes.string.isRequired,
+  stats: PropTypes.array.isRequired,
+};
 
 export default Statistics;
