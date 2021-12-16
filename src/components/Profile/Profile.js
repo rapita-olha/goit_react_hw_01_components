@@ -1,13 +1,7 @@
 import PropTypes from "prop-types";
 import s from "./Profile.module.css";
 
-const Profile = ({
-  avatar,
-  name = "не известно",
-  tag = "не известно",
-  location = "не известно",
-  stats,
-}) => {
+const Profile = ({ avatar, name, tag, location, stats }) => {
   return (
     <div className={s.profile}>
       <div className={s.description}>
@@ -38,6 +32,12 @@ const Profile = ({
       </ul>
     </div>
   );
+};
+
+Profile.defaultProps = {
+  name: "не известно",
+  tag: "не известно",
+  location: "не известно",
 };
 
 Profile.propTypes = {
